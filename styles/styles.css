@@ -1,34 +1,17 @@
-@import '../styles/reset.css';
+@import './reset.css';
+@import './variables.css';
+@import './responsive.css';
 
-:root {
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-secondary: 'Courier New', Courier, monospace;
-    --font-size-base: 16px;
-    --font-size-small: 14px;
-    --font-size-large: 24px;
-    --font-size-xlarge: 32px;
-    --font-size-xxlarge: 64px;
-    --color-primary: #3c72c4;
-    --color-secondary: #f0f0f0;
-    --color-font-dark-primary: black;
-    --color-font-dark-secondary: #333333;
-    --color-font-light-primary: white;
-    --color-font-light-secondary: #f0f0f0;    
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
-    --border-radius: 8px;
-    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+body {
+    background-color: var(--color-font-light-primary);
 }
 
 #hero {
     width: 100%;
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--color-primary) 50%, var(--color-secondary) 50%);
+    overflow: hidden;    
 }
 
 .hero-content {
@@ -44,6 +27,8 @@
 
 .profile-header {
     position: relative;
+    padding: var(--spacing-l);
+    background: linear-gradient(135deg, var(--color-primary) 50%, var(--color-font-light-primary) 50%);
 }
 
 .profile-image {
@@ -55,20 +40,43 @@
 }
 
 .profile-name {
-    font-size: var(--font-size-xxlarge);
+    font-size: var(--font-size-xxl);
     color: var(--color-font-light-primary);   
     position: absolute;
-    bottom: 0;
+    bottom: var(--spacing-l);
     left: 50%;
     transform: translateX(-50%); 
+    text-align: center;
     background: rgba(0, 0, 0, 0.7);
 }
 
 .profile-title {
-    
+    font-size: var(--font-size-l);
 }
 
 .profile-description {
     font-size: var(--font-size-base);
     color: var(--color-font-dark-secondary);
+    padding: var(--spacing-l);
+}
+
+.profile-social {
+    display: flex;
+    gap: var(--spacing-base);
+    font-size: var(--font-size-xl)
+}
+
+.profile-social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-social a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-s);
 }
