@@ -1,0 +1,74 @@
+@import '../styles/reset.css';
+
+:root {
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Courier New', Courier, monospace;
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-large: 24px;
+    --font-size-xlarge: 32px;
+    --font-size-xxlarge: 64px;
+    --color-primary: #3c72c4;
+    --color-secondary: #f0f0f0;
+    --color-font-dark-primary: black;
+    --color-font-dark-secondary: #333333;
+    --color-font-light-primary: white;
+    --color-font-light-secondary: #f0f0f0;    
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --border-radius: 8px;
+    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-primary) 50%, var(--color-secondary) 50%);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-header {
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: auto;
+    object-fit: contain;
+    box-shadow: var(--box-shadow);
+    display: block;
+}
+
+.profile-name {
+    font-size: var(--font-size-xxlarge);
+    color: var(--color-font-light-primary);   
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.profile-title {
+    
+}
+
+.profile-description {
+    font-size: var(--font-size-base);
+    color: var(--color-font-dark-secondary);
+}
