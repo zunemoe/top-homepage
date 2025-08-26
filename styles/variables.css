@@ -1,11 +1,16 @@
 :root {
-    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-secondary: 'Courier New', Courier, monospace;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Source Sans 3', sans-serif;
+    --font-monospace: 'JetBrains Mono', monospace;
     --font-size-base: 16px;
     --font-size-s: 14px;
     --font-size-l: 24px;
     --font-size-xl: 32px;
-    --font-size-xxl: 64px;
+    --font-size-xxl: 48px;
+    --font-size-xxxl: 64px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
     /* --color-primary: #3c72c4;
     --color-secondary: #f0f0f0;
     --color-font-dark-primary: black;
