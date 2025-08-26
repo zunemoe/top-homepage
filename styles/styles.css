@@ -3,7 +3,26 @@
 @import './responsive.css';
 
 body {
-    background-color: var(--color-font-light-primary);
+    background-color: var(--color-bleached-silk);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 450px;
+    /* background-color: var(--color-scarabaeus-sacer); */
+    background-color: var(--color-black-wash);
+    transform-origin: 0;
+    transform: skewY(-10deg);
+    box-shadow: var(--box-shadow);
 }
 
 #hero {
@@ -11,28 +30,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;    
+    overflow: hidden;   
+    margin-bottom: var(--spacing-xl);
 }
 
-.hero-content {
-    width: 100%;
-    max-width: 1200px;
+.header {
+    font-size: var(--font-size-xl);
     text-align: center;
-    z-index: 2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: var(--color-scarabaeus-sacer);    
+}
+
+#about .header {
+    color: var(--color-bleached-silk);
 }
 
 .profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     position: relative;
     padding: var(--spacing-l);
-    background: linear-gradient(135deg, var(--color-primary) 50%, var(--color-font-light-primary) 50%);
 }
 
 .profile-image {
     width: 100%;
+    max-width: 300px;
     aspect-ratio: auto;
     object-fit: contain;
     box-shadow: var(--box-shadow);
@@ -41,7 +64,7 @@ body {
 
 .profile-name {
     font-size: var(--font-size-xxl);
-    color: var(--color-font-light-primary);   
+    color: var(--color-bleached-silk);   
     position: absolute;
     bottom: var(--spacing-l);
     left: 50%;
@@ -50,23 +73,27 @@ body {
     background: rgba(0, 0, 0, 0.7);
 }
 
-.profile-title {
-    font-size: var(--font-size-l);
-}
-
 .profile-description {
     font-size: var(--font-size-base);
-    color: var(--color-font-dark-secondary);
+    color: var(--color-industrial-revolution);
     padding: var(--spacing-l);
 }
 
 .profile-social {
     display: flex;
     gap: var(--spacing-base);
-    font-size: var(--font-size-xl)
+    font-size: var(--font-size-xl);
+    justify-content: center;
+    align-items: center;
+    color: var(--color-scarabaeus-sacer);
 }
 
-.profile-social a {
+#about .profile-social {
+    color: var(--color-silver);
+}
+
+.social {
+    font-size: var(--font-size-xl);
     text-decoration: none;
     color: inherit;
 }
@@ -76,7 +103,113 @@ body {
     transition: transform 0.2s ease;
 }
 
+#projects {
+    width: 100%;
+    margin: var(--spacing-xl) 0;
+}
+
+#projects .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-l);
+    padding: var(--spacing-l);
+}
+
+.project-card {
+    background-color: var(--color-bleached-silk);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* transition: transform 0.2s ease; */
+    padding: var(--spacing-base);
+}
+
+.project-card:hover {
+    transform: scale(1.005);
+}
+
+.project-card .project-image {
+    object-fit: cover;
+}
+
+.project-card .project-header {
+    display: flex;
+    width: 100%;
+}
+
+.project-card .project-header .project-title {
+    font-size: var(--font-size-l);
+    text-align: left;
+    color: var(--color-scarabaeus-sacer);
+}
+
+.project-card .project-header .action-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: var(--spacing-s);
+    padding: var(--spacing-s);   
+}
+
+.project-card .project-header .action-buttons .icon svg {
+    color: var(--color-scarabaeus-sacer);
+}
+
+.project-card .project-header .action-buttons .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.project-description {
+    color: var(--color-industrial-revolution);
+}
+
+#about {
+    background-color: var(--color-black-wash);
+    /* background-color: var(--color-scarabaeus-sacer); */
+    color: var(--color-silver);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--spacing-xl);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    padding: var(--spacing-l);
+}
+
+.contact-phone, 
+.contact-email {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    justify-content: left;
+    color: var(--color-silver);
+}
+
+.contact-phone svg, 
+.contact-email svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-phone a,
+.contact-email a {
+    color: var(--color-silver);
+    text-decoration: none;
+}
+
+.about-image {
+    width: 100%;
+}
+
 footer {
+    color: var(--color-black-wash);
+    width: 100%;
     text-align: center;
     padding: var(--spacing-s);
+    margin-top: auto;
 }

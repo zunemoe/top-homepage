@@ -6,16 +6,25 @@
     --font-size-l: 24px;
     --font-size-xl: 32px;
     --font-size-xxl: 64px;
-    --color-primary: #3c72c4;
+    /* --color-primary: #3c72c4;
     --color-secondary: #f0f0f0;
     --color-font-dark-primary: black;
     --color-font-dark-secondary: #333333;
     --color-font-light-primary: white;
-    --color-font-light-secondary: #f0f0f0;    
+    --color-font-light-secondary: #f0f0f0;     */
+
+    --color-bleached-silk: #F2F2F2;     /* Lightest - backgrounds, cards */
+    --color-silver: #BFBFBF;            /* Light gray - borders, secondary elements */
+    --color-industrial-revolution: #737373; /* Medium gray - body text */
+    --color-scarabaeus-sacer: #404040;  /* Dark gray - headings, primary text */
+    --color-black-wash: #0D0D0D;        /* Darkest - accents, high contrast */
+    --color-box-shadow: #0D0D0D4D;  /* 30% opacity for shadows */
+
     --spacing-s: 8px;
     --spacing-base: 16px;
     --spacing-l: 24px;
     --spacing-xl: 32px;
     --border-radius: 8px;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --box-shadow: 0 4px 12px var(--color-box-shadow);
+    --max-widtdh: 1200px;
 }
