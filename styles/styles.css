@@ -112,11 +112,13 @@ p {
 
 .profile-social a:hover {
     transform: scale(1.1);
-    transition: transform 0.2s ease;
+    color: var(--color-red);
+    transition: all 0.2s ease;
 }
 
 #projects {
     width: 100%;
+    max-width: 1200px;
     /* margin: var(--spacing-xl) 0; */
     padding: var(--spacing-xl);
     display: flex;
@@ -133,22 +135,29 @@ p {
 
 .project-card {
     background-color: var(--color-bleached-silk);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-light);
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    /* transition: transform 0.2s ease; */
+    flex-direction: column;    
     padding: var(--spacing-base);
-    border-radius: 4px;
+    border-radius: 4px;    
+    filter: grayscale(100%);
+    /* gap: var(--spacing-s); */
 }
 
 .project-card:hover {
-    transform: scale(1.005);
+    /* transform: scale(1.01); */
+    box-shadow: var(--box-shadow);
+    filter: grayscale(0%);
+    transition: all 0.2s ease;
 }
 
 .project-card .project-image {
     width: 100%;
-    object-fit: cover;
+    height: 250px;    
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-base);
 }
 
 .project-card .project-header {
@@ -169,13 +178,16 @@ p {
     padding: var(--spacing-s);   
 }
 
-.project-card .project-header .action-buttons .icon svg {
-    color: var(--color-scarabaeus-sacer);
-}
-
 .project-card .project-header .action-buttons .icon {
     width: 24px;
     height: 24px;
+    color: var(--color-scarabaeus-sacer);
+}
+
+.project-card .project-header .action-buttons .icon:hover {  
+    transform: scale(1.1);
+    color: var(--color-red);
+    transition: all 0.2s ease;
 }
 
 .project-description {
@@ -218,6 +230,12 @@ p {
 .contact-email a {
     color: var(--color-silver);
     text-decoration: none;
+}
+
+.contact-phone a:hover,
+.contact-email a:hover {
+    color: var(--color-red);
+    transition: all 0.2s ease;
 }
 
 .about-image {

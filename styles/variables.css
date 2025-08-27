@@ -24,6 +24,7 @@
     --color-scarabaeus-sacer: #404040;  /* Dark gray - headings, primary text */
     --color-black-wash: #0D0D0D;        /* Darkest - accents, high contrast */
     --color-box-shadow: #0D0D0D4D;  /* 30% opacity for shadows */
+    --color-red: #EA4A26;
 
     --spacing-s: 8px;
     --spacing-base: 16px;
@@ -31,5 +32,6 @@
     --spacing-xl: 32px;
     --border-radius: 8px;
     --box-shadow: 0 4px 12px var(--color-box-shadow);
+    --box-shadow-light: 0 2px 4px var(--color-box-shadow);
     --max-widtdh: 1200px;
 }
