@@ -1,0 +1,81 @@
+@media screen and (min-width: 600px) {
+    #hero {
+        flex-direction: row !important;
+        padding: var(--spacing-xl);
+        margin-bottom: 0 !important;
+        justify-content: center;
+    }
+
+    .profile-header {
+        flex: 0 0 45%;
+        padding: 0 !important;
+        position: relative !important;
+        max-width: 450px;
+    }
+
+    .profile-about {
+        flex: 1 0 45%;
+        padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) 0;
+        background-color: var(--color-bleached-silk);
+        box-shadow: var(--box-shadow);
+        max-width: 450px;
+    }
+
+    .profile-image {
+        border-radius: 0 !important;
+    }
+
+    .profile-name {
+        font-size: clamp(2rem, 5vw, 3.5rem) !important;
+        position: absolute !important;
+        bottom: 0 !important;
+    }
+
+    #projects .header,
+    #about .header {
+        text-align: left !important;
+    }
+
+    .profile-description {
+        padding: var(--spacing-l) 0 var(--spacing-l) var(--spacing-l) !important;
+    }
+
+    #hero .profile-social {
+        justify-content: flex-end !important;
+    }
+
+    #about .profile-social {
+        justify-content: center !important;
+    }
+
+    #about {
+        flex-direction: row !important;
+        justify-content: center;
+    }
+
+    #about .about-content {
+        flex: 1 0 45% !important;
+        /* width: auto !important; */
+        justify-content: center !important;
+        align-items: center !important;
+        max-width: 450px;
+    }
+
+    .about-content .contact-description {
+        text-align: center !important;
+    }
+
+    #about .about-image {
+        flex: 1 0 45% !important;
+        /* max-width: none !important; */
+        min-width: 0 !important;
+        padding: var(--spacing-l) !important;
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body::before {
+        height: 450px !important;
+    }
+}
